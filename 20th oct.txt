@@ -1,0 +1,188 @@
+//design1
+//systemproperties
+
+var computername="dell"
+var systemtype="64bit operatingsystem"
+var edition="windows7"
+var memory="4gb"
+var processor="intelcore"
+
+//design2
+
+function systemproperties( ){
+var computername="dell"
+var systemtype="64bit operatingsystem"
+var edition="windows7"
+var memory="4gb"
+var processor="intelcore"
+
+console.log(systemtype)
+}
+systemproperties()
+
+//design3
+
+class systemproperties{
+ computername="dell"
+ systemtype="64bit operatingsystem"
+ edition="windows7"
+ memory="4gb"
+ processor="intelcore"
+
+}
+var ravali=new systemproperties()
+console.log(edition)
+
+//design4
+
+class properties {
+  
+  constructor(systemtype){
+    
+    this.type=systemtype
+   }
+  display(){
+    console.log(this.type)
+    
+  }
+}
+var ravali=new properties()
+ravali.display("computername")
+
+//design4.1
+
+class properties {
+  
+  order(systemtype){
+    
+    this.type=systemtype
+    console.log(this.type)
+   }
+    
+  }
+
+var ravali=new properties()
+ravali.order("computername")
+  
+//design5
+
+var ravali=["dell","64bit operatingsyste","windows7","4gb","intelcore"]
+console.log(ravali)
+
+var ravali={computername:"dell", systemtype:"64bit operatingsystem",edition:"windows7",memory:"4gb"}
+console.log(ravali)
+
+//design6
+
+function  systemproperties(computername,processor,edition,memory,systemtype){
+  if(memory<=systemtype){
+    console.log("avaliable in memory are not")
+    return
+  }
+  switch (computername){
+    case "dell":
+      edition=7
+      processor="intel"
+    break;
+    case "hp":
+      edition=9
+      processor="intelcore"
+      break;
+      
+  }
+  console.log("edition",edition)
+}
+  systemproperties("dell",7)
+  
+//design6.1
+ 
+ function system(){
+   var computername="dell"
+   var processor="intel"
+   var memory="4gb"
+   var systemtype="operatingsystem"
+   var edition="windows7"
+ 
+ switch( computername){
+   case "dell":
+     console.log("windows7")
+     case "hp":
+       console.log("windows8")
+ }
+console.log(computername)
+}
+system()
+ 
+//design7
+
+class computername{
+  constructor(systemtype,memory,processor,edition){
+  this.computername=computername
+  
+  switch(computername){
+    case "dell":
+      this.processor="i2"
+      break;
+      case "hp":
+        this.processor="i3"
+        break;
+  }
+  this.edition=edition
+}
+display(){
+  console.log(this.processor)
+}
+}
+var ravali=new computername("dell","i2")
+ravali.display()
+  
+//design8
+
+class propertie {
+  processor="intel"
+  memory="4gb"
+  edition="windows7"
+  systemtype="operatingsystem"
+  computername="dell"
+  
+}
+class properties {
+  constructor(s,m,p,cn,e)
+  {
+    this.systemtype=s
+    this.memory=m
+    this.processor=p
+    this.computername=cn
+    this.edition=e
+  }
+}
+var ravali=new  propertie("operatingsystem","4gb","intel","dell","windows7")
+var ram=new propertie("os","8gb","i3","hp","windows8")
+
+class  computername extends propertie{
+  constructor(cn){
+    
+    super("operatingsystem","4gb","intel","dell","windows7")
+    this.computername=cn
+    
+}
+ display(){
+  console.log(this.computername,this.edition)
+}
+}
+var raj=new properties("hp")
+var ram=new properties("lenova")
+ raj.display()
+ 
+//design 9
+ 
+let properties=["systemtype","memory","processor"]
+properties.push("computername","operatingsystem","4gb")
+properties.push("intel")
+
+//design10
+
+for(i in properties)
+{
+  console.log(properties[i])
+}
